@@ -30,14 +30,13 @@ def create_midi_vector(paths, aug=range(1)):
         
         
 files = glob.glob("bach/chor[0-9][0-9][0-9].krn.mid")
-Xtr, Xte = train_test_split(files, test_size=0.05, random_state=99)
+Xtr, Xte = train_test_split(files, test_size=50, random_state=99)
 jsb_train, train_skip = create_midi_vector(Xtr)
 jsb_test, test_skip = create_midi_vector(Xte)
 
 
 Xte = glob.glob("Nottingham/test/*") + glob.glob("Nottingham/valid/*")
 Xtr, Xte = train_test_split(Xte, test_size=0.05, random_state=99)
-#Xtr = glob.glob("Nottingham/train/*")
 nmd_train, train_skip = create_midi_vector(Xtr)
 nmd_test, test_skip = create_midi_vector(Xte)
 

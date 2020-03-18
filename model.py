@@ -15,7 +15,6 @@ from rnn import LayerNormLSTMCell as LSTMCell
 ohc = tfp.distributions.OneHotCategorical
 seq2seq = tf.contrib.seq2seq
 w_init = tf.contrib.layers.xavier_initializer()
-k_reg = tf.contrib.layers.l2_regularizer
 
 class MusicVAE:
     def __init__(self, x_depth=[89, 33, 33],
@@ -27,7 +26,7 @@ class MusicVAE:
                  cont_dim=256, cat_dim=2, mu_force=2.0,
                  gumbel=0.05, style_embed_dim=256,
                  training=True,
-                 beta_anneal_steps=1000, l2_reg=0.002, kl_reg=1.0
+                 beta_anneal_steps=1000, kl_reg=1.0
                  ):
         self.features = ["pitch", "dt", "duration", "velocity"]
         self.x_depth = x_depth
@@ -57,7 +56,6 @@ class MusicVAE:
         self.training = training
         self.beta_anneal_steps = beta_anneal_steps
         
-        self.l2_reg = l2_reg
         self.kl_reg = kl_reg
         
         self.summaries = []
@@ -233,10 +231,7 @@ class MusicVAE:
             final_outputs = [tf.argmax(x, axis=-1, output_type=tf.int32) for x in sample_outputs]
             final_outputs = tf.stack(final_outputs, axis=-1)
             
-            if self.dec_rnn == "lstm":
-                final_state = final_state[-1]
-            else:
-                final_state = final_state[-1]
+            final_state = final_state[-1]
             
         return logits, final_outputs, final_seq_len, final_state
     
@@ -374,10 +369,6 @@ class MusicVAE:
             if self.training:
                 # optimizer... training...
                 self.learning_rate = tf.maximum(5e-4 * 0.95 ** ((self.step - 10000) / 5000), 1e-4)
-                #learning_rate = tf.minimum(learning_rate, 5e-4)
-                #self.learning_rate = tf.placeholder_with_default(3e-4, shape=[], name="learning_rate")
-                #self.learning_rate = cyclic_learning_rate(self.step, learning_rate=5e-4, max_lr=0.001, mode="triangular")
-                #learning_rate = 1e-3
                 opt = tf.train.AdamOptimizer(self.learning_rate)
                 g, v = zip(*opt.compute_gradients(self.loss, tf.trainable_variables()))
                 g, _ = tf.clip_by_global_norm(g, 1.0)
