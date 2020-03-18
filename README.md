@@ -60,4 +60,9 @@ cat_dim=2                                 # number of styles (categorical dimens
 ```
 
 ## Feedback 
-Suggestions and opinions of any sort are welcomed. Please contact the authors by sending email to `yuquan95@gmail.com` or `cs.chan@um.edu.my`.
+Suggestions and opinions of any sort are welcomed. Please contact the authors by sending email to `yuquan95 at gmail.com` or `cs.chan at um.edu.my`.
+
+## License and Copyright
+The project is open source under BSD-3 license (see the ``` LICENSE ``` file). Codes can be used freely only for academic purpose.
+
+&#169;2017-2020 Center of Image and Signal Processing, Faculty of Computer Science and Information Technology, University of Malaya.
