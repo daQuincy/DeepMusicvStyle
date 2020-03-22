@@ -1,4 +1,5 @@
 # When Music Meets A.I.
+[Paper](http://web.fsktm.um.edu.my/~cschan/doc/ICME2020.pdf) | [Music Samples (.mp3)](https://bit.ly/3b5QYKW)
 
 ### Official TF implementation of the paper: "Style-conditioned Music Generation"
 
