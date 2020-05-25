@@ -1,4 +1,3 @@
-
 #! /bin/bash
 #
 python train.py --save_path vae_model4/ \
@@ -25,5 +24,4 @@ python train.py --save_path vae_model4/ \
 		--style_embed_dim 80 \
 		--kl_anneal 1800 \
 		--mu_force 1.3 \
-		--batch_size 64 \
-                --restore_path vae_model3/vae-epoch250
+		--batch_size 64
