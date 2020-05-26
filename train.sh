@@ -18,7 +18,6 @@ python train.py --save_path vae_model4/ \
                 --attention 0 \
 		--cont_dim 120 \
 		--cat_dim 2 \
-		--l2_reg 0.0 \
 		--kl_reg 0.8 \
                 --gumbel 0.02 \
 		--style_embed_dim 80 \
