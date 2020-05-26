@@ -383,7 +383,7 @@ class MusicVAE:
             self.summ_op = tf.summary.merge(self.summaries)
             self.saver = tf.train.Saver(max_to_keep=20)
             
-            restore_ops = [self.temperature, self.ouput, self.len,
+            restore_ops = [self.temperature, self.output, self.len,
                            self.z_cont, self.z_cat]
             for restore_op in restore_ops:
                 tf.add_to_collection("restore_ops", restore_op)

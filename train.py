@@ -35,7 +35,6 @@ ap.add_argument("--style_embed_dim", default=100, type=int)
 ap.add_argument("--mu_force", default=2.0, type=float)
 ap.add_argument("--gumbel", default=0.67, type=float)
 
-ap.add_argument("--l2_reg", default=0.002, type=float)
 ap.add_argument("--kl_reg", default=1.0, type=float)
 ap.add_argument("--kl_anneal", default=1000, type=int)
 
@@ -62,7 +61,7 @@ with train_graph.as_default():
                  attention=args.attention,
                  cont_dim=args.cont_dim, cat_dim=args.cat_dim, mu_force=args.mu_force,
                  gumbel=args.gumbel, style_embed_dim=args.style_embed_dim,
-                 l2_reg=args.l2_reg, kl_reg=args.kl_reg,
+                 kl_reg=args.kl_reg,
                  training=True, beta_anneal_steps=args.kl_anneal)
     m.build(t_x, t_s, t_l, None)
     
@@ -77,7 +76,7 @@ with val_graph.as_default():
                  attention=args.attention,
                  cont_dim=args.cont_dim, cat_dim=args.cat_dim, mu_force=args.mu_force,
                  gumbel=args.gumbel, style_embed_dim=args.style_embed_dim,
-                 l2_reg=args.l2_reg, kl_reg=args.kl_reg,
+                 kl_reg=args.kl_reg,
                  training=False, beta_anneal_steps=args.kl_anneal)
     n.build(v_x, v_s, v_l, None)
 
