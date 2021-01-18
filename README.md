@@ -1,5 +1,5 @@
 # When Music Meets A.I.
-[Paper](https://ieeexplore.ieee.org/document/9102870/media#media) | [Music Samples (.mp3)](https://bit.ly/3b5QYKW) | [Supplementary Report](https://drive.google.com/file/d/1R9IOIDa9InuMuPdKcUzkv9_Auft8JJFg/view?usp=sharing)
+[Paper](https://ieeexplore.ieee.org/document/9102870/media#media) | [Music Samples (.mp3)](https://bit.ly/3b5QYKW) | [Supplementary Report](https://drive.google.com/file/d/1gV5LNfdKqRvXVQ3fTstOMq3qWrcmxNyg/view?usp=sharing)
 
 ### Official TF implementation of the paper: "Style-conditioned Music Generation"
 
