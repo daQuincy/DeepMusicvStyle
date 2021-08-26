@@ -3,8 +3,7 @@
 
 ### Official TF implementation of the paper: "Style-conditioned Music Generation"
 
-#### IEEE Multimedia Magazine 2021
-#### ICME 2020 (oral)
+#### IEEE Multimedia Magazine 2021 | ICME 2020 (oral)
 
 Released on March 18, 2020.
 
