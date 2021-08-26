@@ -1,8 +1,9 @@
 # When Music Meets A.I.
-[Paper](https://ieeexplore.ieee.org/document/9102870/media#media) | [Music Samples (.mp3)](https://bit.ly/3b5QYKW) | [Supplementary Report](https://drive.google.com/file/d/1gV5LNfdKqRvXVQ3fTstOMq3qWrcmxNyg/view?usp=sharing)
+[Paper](https://ieeexplore.ieee.org/abstract/document/9302731) | [Music Samples (.mp3)](https://bit.ly/3b5QYKW) | [Supplementary Report](https://drive.google.com/file/d/1gV5LNfdKqRvXVQ3fTstOMq3qWrcmxNyg/view?usp=sharing)
 
 ### Official TF implementation of the paper: "Style-conditioned Music Generation"
 
+#### IEEE Multimedia Magazine 2021
 #### ICME 2020 (oral)
 
 Released on March 18, 2020.
